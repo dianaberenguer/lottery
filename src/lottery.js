@@ -25,6 +25,7 @@ var lottery = function() {
 	}
 	result = calculateResult(whiteBalls, powerBall);
 
+
 	if(powerBall === 7){
 		result = result * 2;
 	}
