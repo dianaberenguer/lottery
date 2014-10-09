@@ -12,7 +12,7 @@ var calculateResult = function ( whiteBalls, powerBall) {
 	return 0;
 };
 
-var lottery = function() { 
+var lottery = function() {
 	var powerBall, whiteBalls, index, result;
 	if(process.argv.length !== 8){
 		console.log("Error. Usage: node " + process.argv[1] + " (5 white balls) power_ball ");
