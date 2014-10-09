@@ -11,7 +11,7 @@ var calculateResult = function ( whiteBalls, powerBall) {
 	}
 	return 0;
 };
-
+var lukyNumber = 7;
 var lottery = function() {
 	var powerBall, whiteBalls, index, result;
 	if(process.argv.length !== 8){
@@ -26,7 +26,7 @@ var lottery = function() {
 	result = calculateResult(whiteBalls, powerBall);
 
 
-	if(powerBall === 7){
+	if(powerBall === luckyNumber){
 		result = result * 2;
 	}
 
