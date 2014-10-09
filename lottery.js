@@ -12,7 +12,7 @@ var calculateResult = function ( whiteBalls, powerBall) {
 	return 0;
 };
 
-var lottery = function() { 
+var lottery = function() {
 	var powerBall, whiteBalls, index, result;
 	if(process.argv.length !== 8){
 		console.log("Error. Usage: node " + process.argv[1] + " (5 white balls) power_ball ");
@@ -24,10 +24,17 @@ var lottery = function() {
 		whiteBalls[index] = parseInt(process.argv[2+index], 10);
 	}
 	result = calculateResult(whiteBalls, powerBall);
-	if(result < 0) {
-		console.log('Invalid arguments.');
+
+
+	if(powerBall === 7){
+		result = result * 2;
+	}
+
+	if(result < 0){
+		console.log("invalid arguments.");
 		return -1;
 	}
+
 	console.log(result + ' percent chance of winning.');
 	return 0;
 };
